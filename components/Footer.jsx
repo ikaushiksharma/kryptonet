@@ -33,7 +33,7 @@ const Footer = () => {
             height={32}
           />
           <p className='dark:text-white text-nft-black-1 font-semibold text-lg ml-1'>
-            KryptoKet
+            KryptoNet
           </p>
           <p className='font-poppins dark:text-white text-nft-black-1 font-semibold text-base mt-6'>
             Get the latest updates
@@ -52,7 +52,7 @@ const Footer = () => {
         </div>
         <div className='flex-1 flexBetweenStart flex-wrap ml-10 md:ml-0 md:mt-8'>
           <FooterLinks
-            heading='KrytoKet'
+            heading='KrytoNet'
             items={['Explore', 'How it Works', 'Contact Us']}
           />
           <FooterLinks
@@ -73,7 +73,7 @@ const Footer = () => {
       >
         <div className='flexBetween flex-row w-full minmd:w-4/5 sm:flex-col mt-7'>
           <p className='font-poppins dark:text-white text-nft-black-1 font-semibold text-base'>
-            KryptoKet, Inc. All Rights Reserved.
+            KryptoNet, Inc. All Rights Reserved.
           </p>
           <div className='flex flex-row sm:mt-4'>
             {[
