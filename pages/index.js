@@ -1,12 +1,12 @@
-import { useEffect,useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Banner from '../components/Banner';
 import CreatorCard from '../components/CreatorCard';
+import NFTCard from '../components/NFTCard';
 
 import images from '../assets';
 import generateId from '../utils/generateId';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
-import { withCoalescedInvoke } from 'next/dist/lib/coalesced-function';
 const Home = () => {
   const [hideButtons, setHideButtons] = useState(false);
   const { theme } = useTheme();
@@ -92,6 +92,32 @@ const Home = () => {
                 </>
               )}
             </div>
+          </div>
+        </div>
+        <div className='mt-10'>
+          <div className='flexBetween flex mx-4 xs:mx-0 minlg:mx-8 sm:flex-col sm:items-start'>
+            <h1
+              className='flex-1 font-poppins dark:text-white text-nft-black-1 text-2xl minlg:text-4xl font-semibold
+            sm:mb-4'
+            >
+              Hot Bids
+            </h1>
+            <div>SearchBar</div>
+          </div>
+          <div className='mt-3 w-full flex flex-wrap justify-start md:justify-center'>
+            {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+              <NFTCard
+                key={`nft-${i}`}
+                nft={{
+                  i,
+                  name: `Nifty NFT ${i}`,
+                  price: (10 - i * 0.534).toFixed(2),
+                  seller: `0x${generateId(3)}...${generateId(4)}`,
+                  owner: `0x${generateId(3)}...${generateId(4)}`,
+                  description: 'Cool NFT on Sale',
+                }}
+              />
+            ))}
           </div>
         </div>
       </div>
